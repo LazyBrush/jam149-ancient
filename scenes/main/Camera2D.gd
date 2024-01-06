@@ -2,7 +2,7 @@ extends Camera2D
 
 var cart_position
 
-
+signal game_over()
 
 func _ready():
 	var cart = get_parent().get_node("player/Cart")
@@ -10,8 +10,14 @@ func _ready():
 	# from within an instanciated scene
 	cart.connect("cart_pos", _cart_update)
 	
-func _cart_update(pos):
+func _cart_update(pos,gpos):
 	cart_position = pos
+	print('pos',pos)
+	print('global',gpos)
+	if gpos.y > 1080:
+		print('dead')
+		emit_signal("game_over","dead",pos.x)
+	
 
 func _process(_delta):
 	# don't move camera up or down
