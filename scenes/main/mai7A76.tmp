@@ -23,4 +23,3 @@ drag_horizontal_enabled = true
 script = ExtResource("3_5308h")
 
 [connection signal="body_entered" from="mine/exit" to="mine/exit" method="_on_body_entered" flags=18]
-[connection signal="game_over" from="Camera2D" to="." method="_on_camera_2d_game_over"]

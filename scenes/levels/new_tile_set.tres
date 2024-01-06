@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bcn6ilff3apf"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bcn6ilff3apf"]
 
 [ext_resource type="Texture2D" uid="uid://bk2v0elgx8h5a" path="res://artwork/cart/cart.png" id="1_3dbck"]
+[ext_resource type="PackedScene" uid="uid://c6kcxgthoyk12" path="res://scenes/levels/exit/exit.tscn" id="2_388ps"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftr5y"]
 texture = ExtResource("1_3dbck")
@@ -256,7 +257,11 @@ texture_region_size = Vector2i(72, 72)
 9:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:9/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5ghfe"]
+scenes/2/scene = ExtResource("2_388ps")
+
 [resource]
 tile_size = Vector2i(72, 72)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ftr5y")
+sources/1 = SubResource("TileSetScenesCollectionSource_5ghfe")
