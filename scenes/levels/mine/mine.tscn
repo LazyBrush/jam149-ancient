@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://lwi7wo53in28"]
+
+[ext_resource type="TileSet" uid="uid://bcn6ilff3apf" path="res://scenes/levels/new_tile_set.tres" id="1_csx1c"]
+
+[node name="mine" type="TileMap"]
+tile_set = ExtResource("1_csx1c")
+cell_quadrant_size = 72
+format = 2
+layer_0/tile_data = PackedInt32Array(458752, 0, 2, 458753, 65536, 2, 458754, 0, 2, 458755, 65536, 2, 458756, 0, 2, 458757, 65536, 2, 458758, 131072, 2, 458759, 196608, 2, 458760, 262144, 2, 524298, 65536, 2, 524299, 131072, 2, 524300, 196608, 2)
