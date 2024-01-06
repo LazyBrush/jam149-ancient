@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://oiw8oxccv61w"]
+[gd_scene load_steps=4 format=3 uid="uid://oiw8oxccv61w"]
 
 [ext_resource type="PackedScene" uid="uid://b1dmodb4e3rfh" path="res://scenes/cart/cart.tscn" id="1_82tav"]
 [ext_resource type="PackedScene" uid="uid://lwi7wo53in28" path="res://scenes/levels/mine/mine.tscn" id="2_4sm7u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hdg5l"]
+friction = 0.04
+bounce = 0.18
+absorbent = true
 
 [node name="main" type="Node2D"]
 
 [node name="Cart" parent="." instance=ExtResource("1_82tav")]
 position = Vector2(67, 519)
-constant_force = Vector2(1000, 0)
+physics_material_override = SubResource("PhysicsMaterial_hdg5l")
+constant_force = Vector2(150, 0)
 
 [node name="mine" parent="." instance=ExtResource("2_4sm7u")]

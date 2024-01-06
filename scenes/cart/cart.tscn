@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1dmodb4e3rfh"]
+[gd_scene load_steps=4 format=3 uid="uid://b1dmodb4e3rfh"]
 
 [ext_resource type="Texture2D" uid="uid://bk2v0elgx8h5a" path="res://artwork/cart/cart.png" id="1_awplp"]
+[ext_resource type="Script" path="res://scenes/cart/cart.gd" id="1_x0e3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0j5e"]
 size = Vector2(41, 33)
 
 [node name="Cart" type="RigidBody2D"]
+script = ExtResource("1_x0e3o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_awplp")
