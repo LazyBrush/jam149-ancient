@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://oiw8oxccv61w"]
+[gd_scene load_steps=4 format=3 uid="uid://oiw8oxccv61w"]
 
 [ext_resource type="PackedScene" uid="uid://v4hxynngrl5s" path="res://scenes/player/player.tscn" id="1_ppr7o"]
 [ext_resource type="PackedScene" uid="uid://lwi7wo53in28" path="res://scenes/levels/mine/mine.tscn" id="2_4sm7u"]
+[ext_resource type="Script" path="res://scenes/main/Camera2D.gd" id="3_5308h"]
 
 [node name="main" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_ppr7o")]
+unique_name_in_owner = true
 position = Vector2(56, 510)
 
 [node name="mine" parent="." instance=ExtResource("2_4sm7u")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(573, 325)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+script = ExtResource("3_5308h")

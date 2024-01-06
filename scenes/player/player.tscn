@@ -17,23 +17,27 @@ bounce = 0.09
 position = Vector2(-1, -8)
 mass = 0.1
 physics_material_override = SubResource("PhysicsMaterial_yer8v")
+lock_rotation = true
 
 [node name="Cart" parent="." instance=ExtResource("1_bawci")]
+unique_name_in_owner = true
 physics_material_override = SubResource("PhysicsMaterial_4fgx5")
 constant_force = Vector2(200, 0)
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
 position = Vector2(-15, 15)
-rotation = -2.58658
+rotation = -2.73842
 node_a = NodePath("../Cart")
 node_b = NodePath("../indi")
 disable_collision = false
-length = 27.0
+length = 22.0
+stiffness = 64.0
 
 [node name="DampedSpringJoint2D2" type="DampedSpringJoint2D" parent="."]
 position = Vector2(13, 15)
-rotation = -3.68264
+rotation = -3.5308
 node_a = NodePath("../Cart")
 node_b = NodePath("../indi")
 disable_collision = false
-length = 25.0
+length = 22.0
+stiffness = 64.0
