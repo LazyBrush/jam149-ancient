@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bib3q6mbxpkh0"]
+
+[ext_resource type="Texture2D" uid="uid://bk2v0elgx8h5a" path="res://artwork/cart/cart.png" id="1_ey4oq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p4auq"]
+radius = 12.0
+
+[node name="indi" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ey4oq")
+hframes = 10
+vframes = 10
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -11)
+shape = SubResource("CircleShape2D_p4auq")
