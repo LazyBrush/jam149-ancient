@@ -1,2 +1,4 @@
 *.?~
 .godot
+.godot
+*.~lock~
