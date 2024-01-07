@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://scenes/end-of-level/end-of-levels.gd" id="1_kesvt"]
 
 [node name="end-of-levels" type="Node2D"]
+z_index = 4096
 script = ExtResource("1_kesvt")
