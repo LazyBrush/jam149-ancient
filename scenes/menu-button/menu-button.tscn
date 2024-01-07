@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkv8tkub2lr64"]
+
+[ext_resource type="Script" path="res://scenes/menu-button/menu-button.gd" id="1_fh1cy"]
+[ext_resource type="Texture2D" uid="uid://crsiuxjrd7w4w" path="res://artwork/menu/menu.png" id="2_8oocw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_04rxk"]
+radius = 35.0007
+height = 245.993
+
+[node name="menu-button" type="Node2D"]
+script = ExtResource("1_fh1cy")
+metadata/is_button = true
+
+[node name="Tool" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_8oocw")
+hframes = 10
+vframes = 10
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, -5)
+rotation = -1.5715
+shape = SubResource("CapsuleShape2D_04rxk")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
