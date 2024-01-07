@@ -28,7 +28,7 @@ func got_to_exit():
 func _process(_delta):
 	pass
 
-func _on_camera_2d_game_over(status, xcoord):
+func _on_camera_2d_game_over(_status, xcoord):
 	# We died
 	call_deferred("_on_show_level_success_state_entered_deferred", xcoord, "dead")
 	
