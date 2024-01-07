@@ -10,18 +10,18 @@ func _ready():
 func setup_tilemap_extras():
 	var tiles = %mine.get_children(true)
 	for t in tiles:
-		print("child: " + t.name)
+		# print("child: " + t.name)
 		if t.has_meta("whatami"):
 			var meta = null
 			meta = t.get_meta("whatami")
-			print("meta: " + meta)
+			# print("meta: " + meta)
 			if meta == "exit":
 				t.got_out_ok.connect(got_to_exit)
 				exit_xcoord = t.position.x
 
 func got_to_exit():
 	# We won
-	print("got to exit, yay")
+	# print("got to exit, yay")
 	call_deferred("_on_show_level_success_state_entered_deferred", exit_xcoord, "alive")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,7 +33,7 @@ func _on_camera_2d_game_over(_status, xcoord):
 	call_deferred("_on_show_level_success_state_entered_deferred", xcoord, "dead")
 	
 func _on_show_level_success_state_entered_deferred(xcoord, dead_or_alive):
-	print("showing success button")
+	# print("showing success button")
 	var success_msg = preload("res://scenes/end-of-level/end-of-levels.tscn")
 	# global, pah
 	dialog = success_msg.instantiate()
@@ -44,7 +44,7 @@ func _on_show_level_success_state_entered_deferred(xcoord, dead_or_alive):
 	# %ColorRect.focus_on_button()
 	
 func _on_done_success_level_dialog():
-	print("callback called")
+	# print("callback called")
 	# go to main menu
 	SceneTransition.change_scene("res://scenes/menu-main/menu-main.tscn")
 	# %ColorRect.focus_reset()

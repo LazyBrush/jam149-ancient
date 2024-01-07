@@ -9,10 +9,10 @@ func _ready():
 			kid.button_pressed.connect(kid_button_pressed)
 
 func kid_button_pressed(item):
-	print('item ' + item.name + ' pressed')
+	#print('item ' + item.name + ' pressed')
 	match (item.name):
 		'play':
-			print("play")
+			#print("play")
 			SceneTransition.change_scene("res://scenes/main/main.tscn")
 		'quit':
 			get_tree().quit()

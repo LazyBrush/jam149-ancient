@@ -12,3 +12,5 @@ res://scenes/end-of-level/end-of-levels.tscn
 res://scenes/end-of-level/end-of-levels.gd
 res://scenes/main/main.gd
 res://scenes/levels/exit/exit.tscn
+res://scenes/menu-main/menu-main.gd
+res://scenes/levels/exit/exit.gd

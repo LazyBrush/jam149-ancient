@@ -26,17 +26,17 @@ func set_icon_normal_hover(normal):
 	
 
 func _on_area_2d_mouse_entered():
-	print('m enter')
+	# print('m enter')
 	%Sprite2D.set_frame(startIcon+1)
 
 
 func _on_area_2d_mouse_exited():
-	print('m leave')
+	# print('m leave')
 	%Sprite2D.set_frame(startIcon)
 
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
-	print('event')
+	# print('event')
 	if event is InputEventMouseButton:
 		if event.pressed:
-			print("event pressed")
+			# print("event pressed")
 			button_pressed.emit(self)

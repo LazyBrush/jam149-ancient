@@ -16,7 +16,7 @@ func _process(_delta):
 	pass
 	
 func showButton(xcoord, dead_or_alive):
-	print("showing fancy end of level button")
+	# print("showing fancy end of level button")
 	button = menuButton.instantiate()
 	var text_index = 4
 	if dead_or_alive == "dead":
@@ -35,6 +35,6 @@ func on_done(cb):
 	callback = cb
 	
 func button_pressed(_butt):
-	print("button pressed")
+	# print("button pressed")
 	if callback != null:
 		callback.call()
