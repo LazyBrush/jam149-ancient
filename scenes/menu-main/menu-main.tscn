@@ -19,3 +19,11 @@ position = Vector2(784, 413)
 unique_name_in_owner = true
 position = Vector2(883, 532)
 startIcon = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1069.0
+offset_top = 617.0
+offset_right = 1140.0
+offset_bottom = 642.0
+bbcode_enabled = true
+text = "[right][color=#555555]v0.0.2[/color][/right]"
