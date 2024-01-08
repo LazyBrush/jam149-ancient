@@ -26,3 +26,6 @@ func _process(_delta):
 	# don't move camera up or down
 	# have it a little in front of cart
 	position.x = cart_position.x + 300
+
+	# Follow vertically, but limited
+	position.y = clamp(cart_position.y + 500, 100, 450)
